@@ -1171,14 +1171,14 @@ def main(args):
                         log(2, f"Adding {len(ips)} IPs from port {port} scan")
                         all_responsive_ips.update(ips)
                     else:
-                        log(2, f"No results file found for port {port}")
+                        log(2, f"Zero Targets have been identified for port {port}")
 
                 # Write to our output file
                 with open(args.output_file, 'a') as f:
                     for ip in sorted(all_responsive_ips):
                         f.write(f"{ip}\n")
 
-                log(1, f"Found {len(all_responsive_ips)} unique IPs with open ports", Fore.GREEN)
+                log(1, f"Identified {len(all_responsive_ips)} Unique Target IPs with open ports", Fore.GREEN)
 
             # Clean up temporary files
             for result_file in port_to_file.values():
