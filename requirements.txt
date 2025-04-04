@@ -1,0 +1,4 @@
+argparse
+scapy==2.4.5
+colorama
+lolcat
